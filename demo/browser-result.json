@@ -1,0 +1,13 @@
+{
+  "mode": "aurora",
+  "passed": true,
+  "browser": "155.0.8059.40",
+  "checks": [
+    "24 synthetic clients render",
+    "caught-up and synthetic labels visible",
+    "desktop/mobile rendering",
+    "no external requests"
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}

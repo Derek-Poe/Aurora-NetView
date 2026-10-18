@@ -1,0 +1,535 @@
+{
+  "as_of": 1800000000,
+  "poll_age_seconds": 0,
+  "cursor": 1202,
+  "observed_max_id": 1202,
+  "caught_up_at_poll": true,
+  "processed": 1202,
+  "expired_on_arrival": 1,
+  "retention_hours": 24,
+  "queries": 1201,
+  "clients": [
+    {
+      "client": "192.0.2.1",
+      "queries": 51,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-0.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-24.example",
+          "hits": 25
+        },
+        {
+          "domain": "late.example",
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.10",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-33.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-9.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.11",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-10.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-34.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.12",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-11.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-35.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.13",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-12.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-36.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.14",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-13.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-37.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.15",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-14.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-38.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.16",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-15.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-39.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.17",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-16.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-40.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.18",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-17.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-41.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.19",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-18.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-42.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.2",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-1.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-25.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.20",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-19.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-43.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.21",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-20.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-44.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.22",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-21.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-45.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.23",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-22.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-46.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.24",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-23.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-47.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.3",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-2.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-26.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.4",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-27.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-3.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.5",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-28.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-4.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.6",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-29.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-5.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.7",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-30.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-6.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.8",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-31.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-7.example",
+          "hits": 25
+        }
+      ]
+    },
+    {
+      "client": "192.0.2.9",
+      "queries": 50,
+      "stale": false,
+      "refreshed": 1800000000,
+      "domains": [
+        {
+          "domain": "service-32.example",
+          "hits": 25
+        },
+        {
+          "domain": "service-8.example",
+          "hits": 25
+        }
+      ]
+    }
+  ],
+  "synthetic": true,
+  "exact_full_recompute_match": true,
+  "batches": [
+    {
+      "read": 100,
+      "cursor": 100,
+      "remaining": true,
+      "processed": 100,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 200,
+      "remaining": true,
+      "processed": 200,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 300,
+      "remaining": true,
+      "processed": 300,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 400,
+      "remaining": true,
+      "processed": 400,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 500,
+      "remaining": true,
+      "processed": 500,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 600,
+      "remaining": true,
+      "processed": 600,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 700,
+      "remaining": true,
+      "processed": 700,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 800,
+      "remaining": true,
+      "processed": 800,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 900,
+      "remaining": true,
+      "processed": 900,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 1000,
+      "remaining": true,
+      "processed": 1000,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 1100,
+      "remaining": true,
+      "processed": 1100,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 100,
+      "cursor": 1200,
+      "remaining": false,
+      "processed": 1200,
+      "expired_on_arrival": 0,
+      "as_of": 1800000000
+    },
+    {
+      "read": 2,
+      "cursor": 1202,
+      "remaining": false,
+      "processed": 1202,
+      "expired_on_arrival": 1,
+      "as_of": 1800000000
+    }
+  ],
+  "refresh_order": [
+    "192.0.2.1",
+    "192.0.2.10",
+    "192.0.2.11",
+    "192.0.2.12",
+    "192.0.2.13",
+    "192.0.2.14",
+    "192.0.2.15",
+    "192.0.2.16",
+    "192.0.2.17",
+    "192.0.2.18",
+    "192.0.2.19",
+    "192.0.2.2",
+    "192.0.2.20",
+    "192.0.2.21",
+    "192.0.2.22",
+    "192.0.2.23",
+    "192.0.2.24",
+    "192.0.2.3",
+    "192.0.2.4",
+    "192.0.2.5",
+    "192.0.2.6",
+    "192.0.2.7",
+    "192.0.2.8",
+    "192.0.2.9"
+  ]
+}

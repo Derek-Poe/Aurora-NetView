@@ -1,0 +1,5 @@
+include README.md PROVENANCE.md LICENSE
+recursive-include benchmarks *.py *.json *.md
+recursive-include checks *.py
+recursive-include demo *.html *.json *.png
+recursive-include tests *.py

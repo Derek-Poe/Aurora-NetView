@@ -1,0 +1,782 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-18T03:10:34.164764+00:00",
+  "host_label": "validation-host-1",
+  "os": "Windows",
+  "os_release": "11",
+  "architecture": "AMD64",
+  "python": "3.14.0",
+  "sqlite": "3.50.4",
+  "warmups_per_case": 2,
+  "measured_repetitions_per_case": 7,
+  "fixture": {
+    "clients": 24,
+    "domains": 48,
+    "event_span_seconds": 72000,
+    "retention_hours": 24,
+    "clock": 1800000000,
+    "client_domain_mapping": "two domains per client"
+  },
+  "timing_scope": {
+    "incremental": "bounded read, four persistent rollups, retention and atomic cursor commit",
+    "full": "four full SQL GROUP BY scans and Python result maps; no persistent writes",
+    "excluded": "fixture creation, initial cache build, template copy, correctness comparison, dashboard refresh"
+  },
+  "source_sha256": {
+    "aurora_netview/core.py": "926fd293e138545d0393b20349c4074c2ec930617761337c175a2a88ff6a2c08",
+    "aurora_netview/fixtures.py": "580012c8476f6609eeab86470a2a5737a887b565be9d79195ff521a73428a856",
+    "benchmarks/run.py": "780805ebf6bb14184c4204b18435b8f0bdb92ec14671ce8c3024e87bca6d4558"
+  },
+  "summaries": [
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "incremental_median_ms": 8.5947,
+      "full_median_ms": 17.4669,
+      "full_over_incremental_ratio": 2.032287339872247
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "incremental_median_ms": 23.6527,
+      "full_median_ms": 19.0725,
+      "full_over_incremental_ratio": 0.8063561453872073
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "incremental_median_ms": 9.7539,
+      "full_median_ms": 232.8623,
+      "full_over_incremental_ratio": 23.873763315186746
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "incremental_median_ms": 35.7146,
+      "full_median_ms": 339.2528,
+      "full_over_incremental_ratio": 9.498994808845682
+    }
+  ],
+  "observations": [
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 0,
+      "warmup": true,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 9886100,
+      "full_ns": 16248700,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 1,
+      "warmup": true,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 16636500,
+      "incremental_ns": 9055200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 2,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 8514400,
+      "full_ns": 15870400,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 3,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 17466900,
+      "incremental_ns": 9502900,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 4,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 8264400,
+      "full_ns": 15890100,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 5,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 24283900,
+      "incremental_ns": 8498100,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 6,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 8930000,
+      "full_ns": 16366800,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 7,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 17583100,
+      "incremental_ns": 9068400,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 100,
+      "source_rows": 10100,
+      "iteration": 8,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 8594700,
+      "full_ns": 17739500,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 0,
+      "warmup": true,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 29991900,
+      "full_ns": 20984900,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 1,
+      "warmup": true,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 18331400,
+      "incremental_ns": 23345700,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 2,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 23652700,
+      "full_ns": 18838300,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 3,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 18924300,
+      "incremental_ns": 26178200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 4,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 23051000,
+      "full_ns": 17424700,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 5,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 23926800,
+      "incremental_ns": 22879600,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 6,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 22779300,
+      "full_ns": 20248500,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 7,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 19072500,
+      "incremental_ns": 24122300,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 10000,
+      "new_rows": 1000,
+      "source_rows": 11000,
+      "iteration": 8,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 24132600,
+      "full_ns": 19478900,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 0,
+      "warmup": true,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 11004100,
+      "full_ns": 243517000,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 1,
+      "warmup": true,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 215772800,
+      "incremental_ns": 10008200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 2,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 9753900,
+      "full_ns": 232862300,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 3,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 224068600,
+      "incremental_ns": 9505500,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 4,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 8659100,
+      "full_ns": 222973800,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 5,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 228031300,
+      "incremental_ns": 10370200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 6,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 9444300,
+      "full_ns": 250270300,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 7,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 269073900,
+      "incremental_ns": 11430900,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 100,
+      "source_rows": 100100,
+      "iteration": 8,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 11462000,
+      "full_ns": 279237300,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 0,
+      "warmup": true,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 30521400,
+      "full_ns": 337005700,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 1,
+      "warmup": true,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 330704800,
+      "incremental_ns": 33164200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 2,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 36060600,
+      "full_ns": 321838500,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 3,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 359942600,
+      "incremental_ns": 42477400,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 4,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 35714600,
+      "full_ns": 344584200,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 5,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 349587100,
+      "incremental_ns": 32809900,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 6,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 31483100,
+      "full_ns": 287693600,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 7,
+      "warmup": false,
+      "order": [
+        "full",
+        "incremental"
+      ],
+      "full_ns": 296999400,
+      "incremental_ns": 32269000,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    },
+    {
+      "history_rows": 100000,
+      "new_rows": 1000,
+      "source_rows": 101000,
+      "iteration": 8,
+      "warmup": false,
+      "order": [
+        "incremental",
+        "full"
+      ],
+      "incremental_ns": 36517100,
+      "full_ns": 339252800,
+      "exact_match": true,
+      "rollup_cells": {
+        "hourly_totals": 20,
+        "hourly_domains": 960,
+        "hourly_clients": 480,
+        "hourly_client_domains": 960
+      }
+    }
+  ]
+}
